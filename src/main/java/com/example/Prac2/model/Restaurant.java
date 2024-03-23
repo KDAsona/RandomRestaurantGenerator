@@ -20,14 +20,23 @@ public class Restaurant {
     @Column(name = "avg_rating")
     private int avgRating;
 
+    @Column(name = "photo_url")
+    private String photoUrl;
+
+    @Column(name = "google_map_url")
+    private String googleMapUrl;
+
     public Restaurant() {
     }
 
-    public Restaurant(Integer restaurantId, String restaurantName, String foodType, int avgRating) {
+    public Restaurant(Integer restaurantId, String restaurantName, String foodType, int avgRating,
+                      String photoUrl, String googleMapUrl) {
         //this.restaurantId = restaurantId;
         this.restaurantName = restaurantName;
         this.foodType = foodType;
         this.avgRating = avgRating;
+        this.photoUrl = photoUrl;
+        this.googleMapUrl = googleMapUrl;
     }
 
     public int getRestaurantId() {
@@ -61,4 +70,21 @@ public class Restaurant {
     public void setAvgRating(int avgRating) {
         this.avgRating = avgRating;
     }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public String getGoogleMapUrl() {
+        return googleMapUrl;
+    }
+
+    public void setGoogleMapUrl(String googleMapUrl) {
+        this.googleMapUrl = googleMapUrl;
+    }
+
 }
